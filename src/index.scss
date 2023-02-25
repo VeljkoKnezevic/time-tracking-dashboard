@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  background: #0e1323;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
