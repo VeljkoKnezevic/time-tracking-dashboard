@@ -1,40 +1,52 @@
+$light-purple: hsl(246, 80%, 60%);
+$light-text: hsl(236, 100%, 87%);
+$dark-purple: hsl(235, 46%, 20%);
+$white: hsl(0, 0%, 100%);
+$button: hsl(235, 45%, 61%);
+$work: hsl(15, 100%, 70%);
+$play: hsl(195, 74%, 62%);
+$study: hsl(348, 100%, 68%);
+$exercise: hsl(145, 58%, 55%);
+$social: hsl(264, 64%, 52%);
+$self-care: hsl(43, 84%, 65%);
+
 .main {
   display: grid;
   margin: 0 24px;
   padding: 81px 0;
 
   .info {
-    background: #1c204b;
+    background: $dark-purple;
     border-radius: 15px;
 
     &__content {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #5747ea;
+      background: $light-purple;
       border-radius: 15px;
       padding: 35px 39px 35px 32px;
 
       &__image {
         width: 64px;
         height: 64px;
-        border: 3px solid #ffffff;
+        border: 3px solid $white;
         border-radius: 50%;
         margin-inline-end: 20px;
       }
 
       &__report {
         font-weight: 400;
-        font-size: 15px;
-        line-height: 18px;
-        color: #bbc0ff;
+        font-size: 0.938rem;
+        line-height: 1.125rem;
+        color: $light-text;
       }
 
       &__name {
         font-weight: 300;
-        font-size: 24px;
-        line-height: 28px;
-        color: #ffffff;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        color: $white;
         margin-block-start: 4px;
       }
     }
@@ -48,43 +60,43 @@
         font-family: "Rubik";
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
-        line-height: 21px;
+        font-size: 1.125rem;
+        line-height: 1.313rem;
         text-align: center;
-        background-color: #1c204b;
-        color: #7078c9;
+        background-color: $dark-purple;
+        color: $button;
         border: none;
       }
     }
   }
 
   .Work {
-    background-color: #ff8b64;
+    background-color: $work;
     background-image: url(./images/icon-work.svg);
   }
 
   .Play {
-    background-color: #55c2e6;
+    background-color: $play;
     background-image: url(./images/icon-play.svg);
   }
 
   .Study {
-    background-color: #ff5e7d;
+    background-color: $study;
     background-image: url(./images/icon-study.svg);
   }
 
   .Exercise {
-    background-color: #4bcf82;
+    background-color: $exercise;
     background-image: url(./images/icon-exercise.svg);
   }
 
   .Social {
-    background-color: #7335d2;
+    background-color: $social;
     background-image: url(./images/icon-social.svg);
   }
 
   .self-care {
-    background-color: #f1c75b;
+    background-color: $self-care;
     background-image: url(./images/icon-self-care.svg);
   }
 
@@ -95,7 +107,7 @@
     background-position: top -11px right 18px;
 
     &__content {
-      background: #1c204b;
+      background: $dark-purple;
       border-radius: 12px;
       margin-block-start: 38px;
       padding: 28px 24px;
@@ -108,9 +120,9 @@
 
       &__heading {
         font-weight: 500;
-        font-size: 18px;
-        line-height: 21px;
-        color: #ffffff;
+        font-size: 1.125rem;
+        line-height: 1.313rem;
+        color: $white;
       }
     }
 
@@ -122,18 +134,18 @@
 
       &__current {
         font-weight: 300;
-        font-size: 32px;
-        line-height: 38px;
-        color: #ffffff;
+        font-size: 2rem;
+        line-height: 2.375rem;
+        color: $white;
       }
 
       &__previous {
         font-weight: 400;
-        font-size: 15px;
-        line-height: 18px;
+        font-size: 0.938rem;
+        line-height: 1.125rem;
         text-align: right;
 
-        color: #bbc0ff;
+        color: $light-text;
       }
     }
   }
@@ -170,8 +182,8 @@
 
         &__name {
           margin-block-start: 3px;
-          font-size: 40px;
-          line-height: 47px;
+          font-size: 2.5rem;
+          line-height: 2.938rem;
         }
       }
 
@@ -183,7 +195,7 @@
 
         &__selector:hover {
           cursor: pointer;
-          color: #ffffff;
+          color: $white;
         }
       }
     }
@@ -209,12 +221,12 @@
         align-items: flex-start;
 
         &__current {
-          font-size: 56px;
-          line-height: 66px;
+          font-size: 3.5rem;
+          line-height: 4.125rem;
         }
 
         &__previous {
-          margin-top: 8px;
+          margin-block-start: 8px;
         }
       }
     }
