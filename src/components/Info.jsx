@@ -1,6 +1,21 @@
 import Jeremy from "../images/image-jeremy.png";
 
-const Info = () => {
+const Info = ({ setTimeframe }) => {
+  const handleClick = (e) => {
+    //Resets all colors
+    let allElements = e.target.parentElement.children;
+    const allElementsArr = [...allElements];
+    allElementsArr.forEach((element) => {
+      element.style.color = "#7078C9";
+    });
+
+    const value = e.target.value;
+    setTimeframe(value);
+
+    //Sets the clicked button to white
+    e.target.style.color = "#ffffff";
+  };
+
   return (
     <div className="info">
       <div className="info__content">
@@ -11,9 +26,27 @@ const Info = () => {
         </section>
       </div>
       <div className="info__selectors">
-        <button className="info__selectors__selector">Daily</button>{" "}
-        <button className="info__selectors__selector">Weekly</button>{" "}
-        <button className="info__selectors__selector">Monthly</button>
+        <button
+          value="daily"
+          onClick={handleClick}
+          className="info__selectors__selector"
+        >
+          Daily
+        </button>{" "}
+        <button
+          onClick={handleClick}
+          value="weekly"
+          className="info__selectors__selector"
+        >
+          Weekly
+        </button>{" "}
+        <button
+          value="monthly"
+          onClick={handleClick}
+          className="info__selectors__selector"
+        >
+          Monthly
+        </button>
       </div>
     </div>
   );

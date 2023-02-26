@@ -54,19 +54,43 @@
         background-color: #1c204b;
         color: #7078c9;
         border: none;
-
-        &:focus {
-          color: #ffffff;
-        }
       }
     }
   }
 
+  .Work {
+    background-color: #ff8b64;
+    background-image: url(./images/icon-work.svg);
+  }
+
+  .Play {
+    background-color: #55c2e6;
+    background-image: url(./images/icon-play.svg);
+  }
+
+  .Study {
+    background-color: #ff5e7d;
+    background-image: url(./images/icon-study.svg);
+  }
+
+  .Exercise {
+    background-color: #4bcf82;
+    background-image: url(./images/icon-exercise.svg);
+  }
+
+  .Social {
+    background-color: #7335d2;
+    background-image: url(./images/icon-social.svg);
+  }
+
+  .self-care {
+    background-color: #f1c75b;
+    background-image: url(./images/icon-self-care.svg);
+  }
+
   .card {
-    background: #ff8b64;
     border-radius: 15px;
     margin-block-start: 24px;
-    background-image: url(./images/icon-work.svg);
     background-repeat: no-repeat;
     background-position: top -11px right 18px;
 
@@ -140,7 +164,12 @@
           height: 78px;
         }
 
-        &__heading {
+        &__report {
+          margin-block-start: 43px;
+        }
+
+        &__name {
+          margin-block-start: 3px;
           font-size: 40px;
           line-height: 47px;
         }
@@ -149,11 +178,45 @@
       &__selectors {
         flex-direction: column;
         align-items: flex-start;
+        gap: 21px;
+        padding: 26px 155px 33px 32px;
+
+        &__selector:hover {
+          cursor: pointer;
+          color: #ffffff;
+        }
       }
     }
 
     .card {
       margin-block-start: 0;
+      height: 60%;
+
+      &__content {
+        margin-block-start: 45px;
+        padding: 29px 35px 32px 30px;
+
+        &:hover {
+          cursor: pointer;
+          background: #33397a;
+          transform: translateY(10px);
+        }
+      }
+
+      &__hours {
+        margin-block-start: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__current {
+          font-size: 56px;
+          line-height: 66px;
+        }
+
+        &__previous {
+          margin-top: 8px;
+        }
+      }
     }
   }
 }

@@ -1,9 +1,38 @@
 import Ellipsis from "../images/icon-ellipsis.svg";
 import dataSet from "../../data.json";
+import { useEffect, useState } from "react";
 
-const Card = ({ name }) => {
+const Card = ({ name, timeframe }) => {
+  const [colorClass, setColorClass] = useState("");
+
+  const colorSetting = () => {
+    switch (name) {
+      case "Work":
+        setColorClass(name);
+        break;
+      case "Play":
+        setColorClass(name);
+        break;
+      case "Study":
+        setColorClass(name);
+        break;
+      case "Exercise":
+        setColorClass(name);
+        break;
+      case "Social":
+        setColorClass(name);
+        break;
+      default:
+        setColorClass("self-care");
+    }
+  };
+
+  useEffect(() => {
+    colorSetting();
+  }, []);
+
   return (
-    <section className="card">
+    <div className={`card ${colorClass}`}>
       <section className="card__content">
         <div className="card__container">
           <h2 className="card__container__heading">{name}</h2>
@@ -13,7 +42,7 @@ const Card = ({ name }) => {
           <p className="card__hours__current">
             {dataSet.map((data) => {
               if (data.title === name) {
-                return data.timeframes.weekly.current;
+                return data.timeframes[timeframe].current;
               }
             })}
             hrs
@@ -22,14 +51,14 @@ const Card = ({ name }) => {
             Last week -{" "}
             {dataSet.map((data) => {
               if (data.title === name) {
-                return data.timeframes.weekly.previous;
+                return data.timeframes[timeframe].previous;
               }
             })}{" "}
             hrs
           </p>
         </div>
       </section>
-    </section>
+    </div>
   );
 };
 
